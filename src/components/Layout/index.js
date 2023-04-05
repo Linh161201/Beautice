@@ -1,2 +1,1 @@
-export { defaults as DefaultLayout } from "./DefaultLayout";
-export { defaults as HeaderOnly } from "./DefaultLayout";
+export { default as DefaultLayout } from './DefaultLayout';

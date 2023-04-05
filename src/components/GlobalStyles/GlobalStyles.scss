@@ -1,9 +1,13 @@
 @import "normalize.css";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,100&family=Poppins:wght@100;500;600;700&display=swap');
 :root {
     --primary: #ff64ae;
-    --defaultlayout-header-hight: 150px;
+    --defaultlayout-header-hight: 63px;
     --defaultlayout-header-width: 1440px;
+    --default--layout--width: 1440px;
+    --default--font--family: 'Poppins';
 }
 
 * {
@@ -16,8 +20,20 @@ html {
     font-size: 62.5%;
 }
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: var(--default--font--family), 'Roboto', sans-serif;
     font-size: 1.6rem;
-    line-height: 2.4rem;
-    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    text-rendering: optimizespeed;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: transparent;
+}
+
+li{
+    list-style-type: none;
 }

@@ -1,187 +1,160 @@
-import classNames from "classnames/bind";
-import styles from "./Footer.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCirclePlay } from "@fortawesome/free-regular-svg-icons";
-import { faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-
+import classNames from 'classnames/bind';
+import styles from './Footer.module.scss';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp, faCircleArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF, faInstagram, faLinkedinIn, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 const cx = classNames.bind(styles);
 
-function Footer() {
+function Footer({ children }) {
     return (
-        <footer className={cx("wrapper")}>
-            <div className={cx("inner")}>
-                {/* Logo, Navication  */}
-                <div className={cx("contact")}>
-                    <div className={cx("footer-01")}>
+        <footer className={cx('wrapper')}>
+            <div className={cx('inner')}>
+                <div className={cx('content')}>
+                    <div className={cx('contact')}>
                         <img
-                            className={cx("logo-footer")}
+                            className={cx('mb2')}
                             src="https://wordpress.altdesain.com/beautice/beautyclinic/wp-content/uploads/2021/11/header-builder-logo.png"
                             alt="logo"
                         />
-                        <p className={cx("text-01")}>
-                            <strong>Beautice</strong> is a Beauty Clinic
-                            WordPress Theme.
+                        <p className={cx('text', 'mb2')}>
+                            <strong>Beautice </strong>
+                            is a Beauty Clinic WordPress Theme.
                         </p>
-                        <em className={cx("text-02")}>
-                            Baker Steet 101, NY, United States.
-                        </em>
-                        <br />
-                        <em className={cx("text-34")}>
-                            <a className={cx("text-03")} href="tel:5215698966">
-                                +521 569 8966.
-                            </a>
-                            <a
-                                className={cx("text-04")}
-                                href="mailto:mail@company.com"
-                            >
-                                mail@company.com.
-                            </a>
-                        </em>
+
+                        <p className={cx('text-small')}>Baker Steet 101, NY, United States.</p>
+                        <p className={cx('text-small')}>
+                            <span className={cx('pr5')}>
+                                <Link to="" className={cx('link')}>
+                                    +521 569 8966
+                                </Link>
+                            </span>
+                            <span className={cx('pr5')}>
+                                <Link to="" className={cx('link')}>
+                                    mail@company.com.
+                                </Link>
+                            </span>
+                        </p>
                     </div>
-                </div>
-                <div className={cx("page-info")}>
-                    <div className={cx("page")}>
-                        <h2 className={cx("text-page-1")}>Pages</h2>
-                        <div classNames={cx("text-col")}>
-                            <a>
-                                <FontAwesomeIcon
-                                    className={cx("play-footer")}
-                                    icon={faCircleArrowRight}
-                                />
-                                Home
-                            </a>
-                            <br />
-                            <br />
-                            <a>
-                                <FontAwesomeIcon
-                                    className={cx("play-footer")}
-                                    icon={faCircleArrowRight}
-                                />
-                                About
-                            </a>
-                            <br />
-                            <br />
-                            <a>
-                                <FontAwesomeIcon
-                                    className={cx("play-footer")}
-                                    icon={faCircleArrowRight}
-                                />{" "}
-                                Service
-                            </a>
-                            <br />
-                            <br />
-
-                            <a>
-                                <FontAwesomeIcon
-                                    className={cx("play-footer")}
-                                    icon={faCircleArrowRight}
-                                />
-                                Gallery
-                            </a>
-                            <br />
-                            <br />
-
-                            <a>
-                                <FontAwesomeIcon
-                                    className={cx("play-footer")}
-                                    icon={faCircleArrowRight}
-                                />
-                                Team
-                            </a>
+                    <div className={cx('page-info')}>
+                        <div className={cx('page')}>
+                            <h3 className={cx('text-large', 'mb1-5')}>Pages</h3>
+                            <ul>
+                                <li className={cx('mb1-5')}>
+                                    <Link to="/" className={cx('text')}>
+                                        <span className={cx('pr1-5')}>
+                                            <FontAwesomeIcon className={cx('link')} icon={faCircleArrowRight} />
+                                        </span>
+                                        <span className={cx('link')}>Home</span>
+                                    </Link>
+                                </li>
+                                <li className={cx('mb1-5')}>
+                                    <Link to="/about" className={cx('text')}>
+                                        <span className={cx('pr1-5')}>
+                                            <FontAwesomeIcon className={cx('link')} icon={faCircleArrowRight} />
+                                        </span>
+                                        <span className={cx('link')}>About</span>
+                                    </Link>
+                                </li>
+                                <li className={cx('mb1-5')}>
+                                    <Link to="/service" className={cx('text')}>
+                                        <span className={cx('pr1-5')}>
+                                            <FontAwesomeIcon className={cx('link')} icon={faCircleArrowRight} />
+                                        </span>
+                                        <span className={cx('link')}>Service</span>
+                                    </Link>
+                                </li>
+                                <li className={cx('mb1-5')}>
+                                    <Link to="/gallery" className={cx('text')}>
+                                        <span className={cx('pr1-5')}>
+                                            <FontAwesomeIcon className={cx('link')} icon={faCircleArrowRight} />
+                                        </span>
+                                        <span className={cx('link')}>Gallery</span>
+                                    </Link>
+                                </li>
+                                <li className={cx('mb1-5')}>
+                                    <Link to="/team" className={cx('text')}>
+                                        <span className={cx('pr1-5')}>
+                                            <FontAwesomeIcon className={cx('link')} icon={faCircleArrowRight} />
+                                        </span>
+                                        <span className={cx('link')}>Team</span>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className={cx('info')}>
+                            <h3 className={cx('text-large', 'mb1-5')}>Infomation</h3>
+                            <ul>
+                                <li className={cx('mb1-5')}>
+                                    <Link to="/" className={cx('text')}>
+                                        <span className={cx('pr1-5')}>
+                                            <FontAwesomeIcon className={cx('link')} icon={faCircleArrowRight} />
+                                        </span>
+                                        <span className={cx('link')}>Terms & conditions</span>
+                                    </Link>
+                                </li>
+                                <li className={cx('mb1-5')}>
+                                    <Link to="/" className={cx('text')}>
+                                        <span className={cx('pr1-5')}>
+                                            <FontAwesomeIcon className={cx('link')} icon={faCircleArrowRight} />
+                                        </span>
+                                        <span className={cx('link')}>Privacy policy</span>
+                                    </Link>
+                                </li>
+                                <li className={cx('mb1-5')}>
+                                    <Link to="/blog" className={cx('text')}>
+                                        <span className={cx('pr1-5')}>
+                                            <FontAwesomeIcon className={cx('link')} icon={faCircleArrowRight} />
+                                        </span>
+                                        <span className={cx('link')}>Blog</span>
+                                    </Link>
+                                </li>
+                                <li className={cx('mb1-5')}>
+                                    <Link to="/contact" className={cx('text')}>
+                                        <span className={cx('pr1-5')}>
+                                            <FontAwesomeIcon className={cx('link')} icon={faCircleArrowRight} />
+                                        </span>
+                                        <span className={cx('link')}>Contact</span>
+                                    </Link>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div className={cx("info")}>
-                        <h2 className={cx("text-page-2")}>Informations</h2>
-                        <div classNames={cx("text-col")}>
-                            <a>
-                                <FontAwesomeIcon
-                                    className={cx("play-footer")}
-                                    icon={faCircleArrowRight}
-                                />
-                                Home
-                            </a>
-                            <br />
-                            <br />
-                            <a>
-                                <FontAwesomeIcon
-                                    className={cx("play-footer")}
-                                    icon={faCircleArrowRight}
-                                />
-                                About
-                            </a>
-                            <br />
-                            <br />
-                            <a>
-                                <FontAwesomeIcon
-                                    className={cx("play-footer")}
-                                    icon={faCircleArrowRight}
-                                />{" "}
-                                Service
-                            </a>
-                            <br />
-                            <br />
 
-                            <a>
-                                <FontAwesomeIcon
-                                    className={cx("play-footer")}
-                                    icon={faCircleArrowRight}
-                                />
-                                Gallery
-                            </a>
-                        </div>
+                    {/* Arrow up */}
+                    <div className={cx('arrow-top')}>
+                        <Link to={{ children }}>
+                            <div className={cx('bg-arrow')}>
+                                <FontAwesomeIcon icon={faArrowUp} />
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>
-            <div className={cx("footer")}>
-                <div className={cx("footer-left")}>
-                    <div className={cx("icon-socical")}>
-                        <div className={cx("blue-media")}>
-                            <FontAwesomeIcon
-                                className={cx("pink-icon")}
-                                icon={faFacebookF}
-                                size="2x"
-                            />
-                        </div>
-                        <div className={cx("blue-media")}>
-                            <FontAwesomeIcon
-                                className={cx("pink-icon")}
-                                icon={faInstagram}
-                                size="2x"
-                            />
-                        </div>
-                        <div className={cx("blue-media")}>
-                            <FontAwesomeIcon
-                                className={cx("pink-icon")}
-                                icon={faTwitter}
-                                size="2x"
-                            />
-                        </div>
-                        <div className={cx("blue-media")}>
-                            <FontAwesomeIcon
-                                className={cx("pink-icon")}
-                                icon={faYoutube}
-                                size="2x"
-                            />
-                        </div>
-                        <div className={cx("blue-media")}>
-                            <FontAwesomeIcon
-                                className={cx("pink-icon")}
-                                icon={faLinkedinIn}
-                                size="2x"
-                            />
+            <div className={cx('inner')}>
+                <div className={cx('footer')}>
+                    <div className={cx('footer-left')}>
+                        <div className={cx('icon-socical')}>
+                            <div>
+                                <FontAwesomeIcon className={cx('pink-icon')} icon={faFacebookF} />
+                            </div>
+                            <div>
+                                <FontAwesomeIcon className={cx('pink-icon')} icon={faTwitter} />
+                            </div>
+                            <div>
+                                <FontAwesomeIcon className={cx('pink-icon')} icon={faLinkedinIn} />
+                            </div>
+                            <div>
+                                <FontAwesomeIcon className={cx('pink-icon')} icon={faYoutube} />
+                            </div>
+                            <div>
+                                <FontAwesomeIcon className={cx('pink-icon')} icon={faInstagram} />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className={cx("footer-right")}>
-                    <p className={cx("text-right")}>
-                        © AltDesain Studio 2021 – All right reserved.
-                    </p>
-                    <button></button>
+                    <div className={cx('footer-right')}>
+                        <p>© AltDesain Studio 2021 – All right reserved.</p>
+                    </div>
                 </div>
             </div>
         </footer>

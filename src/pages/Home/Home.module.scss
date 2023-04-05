@@ -1,67 +1,64 @@
+.background{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1300px;
+    height: 666px;
+    background-image: url("https://wordpress.altdesain.com/beautice/beautyclinic/wp-content/uploads/2021/11/slide-background1-large.png");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+
 .wrapper {
-    padding-top: 100px;
-    padding-left: 100px;
-    text-align: start;
+    position: relative;
+    text-align: start; 
+    z-index: 2;
 }
 .content {
     display: flex;
+    width: 1140px;
+    margin-left: 15rem;
+}
+
+.main-slider {
+    margin-top: 20rem;
+    display: flex;
+    width: 1140px;
 }
 
 .title {
-    position: absolute;
-    width: 430px;
-    height: 128px;
-    left: 250px;
-    top: 316px;
-    font-family: "Poppins";
     font-style: normal;
     font-weight: 600;
     font-size: 48px;
     line-height: 125%;
-    /* or 60px */
-
+    padding-bottom: 1rem;
     color: #091156;
 }
 .description {
-    position: absolute;
-    width: 474px;
-    height: 54px;
-    left: 250px;
-    top: 444px;
-
-    font-family: "Poppins";
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.1em;
-
     color: #091156;
-}
-.btn-01 {
-    position: absolute;
-    top: 526px;
-    background: #ff64ae;
-    border-radius: 50px;
-    left: 250px;
+    margin-bottom: 4rem;
 }
 
 .btn-contact {
     width: 200px;
     height: 58.36px;
     left: 250px;
+    color: white;
     background: #ff64ae;
     box-shadow: 0px 17px 22px #ffedf6;
     border-radius: 50px;
-    font-family: "Poppins";
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
     line-height: 24px;
     text-align: center;
     letter-spacing: 0.1em;
     border: none;
-    color: #ffffff;
     &:hover {
         background-color: #0056b3;
         transition: 0.5s;
@@ -74,6 +71,7 @@
 
 .left {
     width: 50%;
+    text-align: left;
 }
 
 //Main Services
@@ -85,7 +83,6 @@
 }
 .title-main {
     font-weight: 600;
-    font-size: 1.6rem;
     line-height: 125%;
     color: var(--primary);
 }
@@ -97,7 +94,6 @@
 }
 .description-main-1 {
     color: #8b8b8b;
-    font-size: 16px;
     line-height: 24px;
 }
 
@@ -196,7 +192,7 @@
     width: 948.15px;
     height: 1028.89px;
     top: 1260px;
-    left: 730px;
+    left: 531px;
     background-image: url("https://wordpress.altdesain.com/beautice/beautyclinic/wp-content/uploads/2021/11/BG-1.png");
 }
 .aboutus {
@@ -209,7 +205,6 @@
 }
 .title-about {
     font-weight: 600;
-    font-size: 1.6rem;
     line-height: 125%;
     color: var(--primary);
     text-align: start;
@@ -227,7 +222,6 @@
 }
 .description-aboutus {
     color: #8b8b8b;
-    font-size: 16px;
     line-height: 24px;
     margin-left: 50px;
     margin-bottom: 30px;
@@ -235,9 +229,11 @@
     margin-right: 180px;
 }
 
+
 .btn-aboutus {
     display: flex;
     flex-wrap: nowrap;
+    align-items: center;
 }
 .btn-aboutus-more {
     font-weight: 600;
@@ -246,7 +242,6 @@
     background: #ff64ae;
     box-shadow: 0px 17px 22px #ffedf6;
     border-radius: 50px;
-    font-size: 16px;
     line-height: 24px;
     text-align: center;
     letter-spacing: 0.1em;
@@ -274,6 +269,35 @@
         cursor: pointer;
     }
 }
+
+.play-btn {
+    cursor: pointer;
+    margin-left: 5rem;
+    background-color: #091156;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    display: flex;
+
+    img {
+        width: 49px;
+        height: 49px;
+        object-fit: cover;
+        background-color: transparent;
+    }
+
+    &:hover {
+        background-color: #ACB2EC;
+        transition: 0.8s;
+    }
+}
+
+.about-video {
+    color: #8B8B8B;
+    font-weight: 600;
+    margin-left: 2rem;
+}
+
 //Teams
 .Teams {
     margin-top: 650px;
@@ -282,7 +306,6 @@
 }
 .title-Teams {
     font-weight: 600;
-    font-size: 1.6rem;
     line-height: 125%;
     color: var(--primary);
     margin-bottom: 20px;
@@ -295,7 +318,6 @@
 }
 .description-Teams-1 {
     color: #8b8b8b;
-    font-size: 16px;
     line-height: 24px;
 }
 //Professional-section
@@ -342,7 +364,6 @@
 .Professional-box-title2 {
     color: var(--primary);
     font-weight: 600;
-    font-size: 16px;
     margin-bottom: 15px;
 }
 .Professional-box-description {
@@ -427,30 +448,15 @@
 .blue-icon:hover {
     color: rgb(255, 255, 255);
 }
+
 .pink-media:hover {
     color: rgb(255, 255, 255);
 }
+
 .light-blue-media:hover {
     color: rgb(255, 255, 255);
 }
 
-// .blue-icon {
-//     &:hover {
-//         background-color: #3b5998;
-//     }
-// }
-
-// .light-blue-icon {
-//     &:hover {
-//         background-color: #1da1f2;
-//     }
-// }
-
-// .pink-icon {
-//     &:hover {
-//         background-color: #fb679b;
-//     }
-// }
 .background-form {
     z-index: 1;
     background-size: cover;
@@ -484,7 +490,6 @@
 }
 .title-contactus {
     font-weight: 600;
-    font-size: 1.6rem;
     line-height: 125%;
     color: var(--primary);
     margin-bottom: 10px;
@@ -497,7 +502,6 @@
 }
 .description-main-us-1 {
     color: #8b8b8b;
-    font-size: 16px;
     line-height: 24px;
 }
 ///Form
@@ -580,7 +584,6 @@
     background: #ff64ae;
     box-shadow: 0px 17px 22px #ffedf6;
     border-radius: 50px;
-    font-size: 16px;
     line-height: 24px;
     text-align: center;
     letter-spacing: 0.1em;

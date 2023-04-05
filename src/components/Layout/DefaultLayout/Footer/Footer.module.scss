@@ -4,124 +4,140 @@
     z-index: 1;
     background-image: url("https://wordpress.altdesain.com/beautice/beautyclinic/wp-content/uploads/2021/11/footer_bg1.png");
 }
-.inner {
-    height: 530px;
-    display: flex;
 
-    .contact {
-        width: 50%;
-        z-index: 2;
-        margin-top: 250px;
-        margin-left: 200px;
+.inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    height: 300px;
+    width: 1140px;
+    display: flex;
+    margin-top: 20rem;
+}
+
+//Left
+.contact{
+    width: 45%;
+}
+
+.mb1-5{
+    margin-bottom: 1.5rem;
+}
+
+.mb2{
+    margin-bottom: 2rem;
+}
+
+.pr1-5{
+    padding-right: 1.5rem;
+}
+
+.pr5{
+    padding-right: 5rem;
+}
+
+.text{
+    color: #D7DBFF;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.text-small{
+    color: #D7DBFF;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.text-large{
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+
+.link{
+    color: #D7DBFF;
+    
+    &:hover{
+        color: #FFFFFF;
+
     }
-    // contact
-    .footer-01 {
-        height: 280px;
-        z-index: 2;
-        .logo-footer {
-            margin-bottom: 25px;
-        }
-        .text-01 {
-            color: #d7dbff;
-            font-family: "Poppins", Sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-            letter-spacing: 1px;
-            margin-bottom: 25px;
-        }
-        .text-02 {
-            color: #d7dbff;
-            font-family: "Poppins", Sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
-        .text-34 {
-            margin-top: 20px;
-        }
-        .text-03 {
-            padding-top: 20px;
-            color: #d7dbff;
-            font-family: "Poppins", Sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-            margin-right: 100px;
-        }
-        .text-04 {
-            color: #d7dbff;
-            font-family: "Poppins", Sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-        }
+}
+
+.page-info{
+    width: 45%;
+    display: flex;
+}
+
+.page{
+    width: 50%;
+}
+
+.info{
+    width: 50%;
+}
+
+.arrow-top{
+    width: 10%;
+}
+
+.bg-arrow{
+    display: flex;
+    float: right;
+    position: relative;
+    top: 226px;
+    width: 44px;
+    height: 44px;
+    border-radius: 25%;
+    background-color: #FF64AE;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #6f42c1;
+        transition: 0.8s;
     }
-    .page-info {
-        margin-top: 250px;
-        width: 50%;
+}
+
+.footer{
+    display: flex;
+    width: 1140px;
+}
+
+.footer-left{
+    width: 45%;
+
+    .icon-socical {
+        position: relative;
         z-index: 2;
         display: flex;
+        align-items: center;
+    }
+
+    .pink-icon {
+        padding-right: 5rem;
         color: white;
-        height: 280px;
-        .page {
-            width: 50%;
-            .text-page-1 {
-                margin-left: 10px;
-                margin-bottom: 25px;
-            }
-            .text-col {
-                font-size: 16px;
-            }
-            .play-footer {
-                margin-right: 10px;
-            }
-        }
-        .info {
-            width: 50%;
-            .text-page-2 {
-                margin-bottom: 25px;
-            }
-            .play-footer {
-                border: none;
-                margin-right: 10px;
-            }
+        cursor: pointer;
+        font-size: 2.4rem;
+
+        &:hover {
+            color: rgb(248, 39, 136);
         }
     }
 }
-.footer {
-    height: 170px;
-    width: 100%;
-    z-index: 2;
-    display: flex;
 
-    .footer-left {
-        width: 50%;
-        z-index: 2;
-        margin-left: 200px;
-        margin-right: 300px;
-        .icon-socical {
-            margin-top: 3rem;
-            position: relative;
-            z-index: 2;
-            display: flex;
-            justify-content: space-around;
-        }
-        .pink-icon {
-            color: white;
-            cursor: pointer;
-            &:hover {
-                color: pink;
-            }
-        }
-    }
-    .footer-right {
-        width: 70%;
-        z-index: 2;
-    }
-    .text-right {
-        margin-top: 3rem;
-        color: #d7dbff;
-        font-family: "Poppins", Sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        letter-spacing: 1px;
-    }
+.footer-right{
+    width: 45%;
+    text-align: center;
+    color: #D7DBFF;
+    font-weight: 400;
+    letter-spacing: 1px
 }
